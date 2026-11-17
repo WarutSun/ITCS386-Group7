@@ -1,0 +1,17 @@
+# Python temporary files
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Editor and OS
+.vscode/
+.DS_Store
+Thumbs.db
