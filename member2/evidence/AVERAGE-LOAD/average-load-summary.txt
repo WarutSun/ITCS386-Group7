@@ -1,0 +1,39 @@
+AVERAGE LOAD TEST SUMMARY
+Group 7 - Member 2
+Tool: Grafana k6
+
+Configuration:
+Maximum VUs: 10
+Duration: 3 minutes
+Workload: Shared workload.js
+
+THRESHOLDS:
+Response time: p(95) < 1000 ms
+HTTP failure rate: < 5%
+
+ACTUAL RESULTS:
+Checks: 960/960 (100%)
+HTTP Requests: 1290
+HTTP Failures: 0 (0.00%)
+Iterations: 320
+Maximum VUs: 10
+
+HTTP RESPONSE TIME:
+Average: 107.06 ms
+Median: 94.14 ms
+P90: 151.28 ms
+P95: 172.90 ms
+Maximum: 304.05 ms
+
+THRESHOLD RESULTS:
+Response time: PASS
+HTTP failure rate: PASS
+
+CONCLUSION:
+The Average Load test passed both defined thresholds.
+The system handled the tested workload of up to
+10 virtual users with no HTTP request failures.
+
+Note:
+This result demonstrates performance under the tested
+profile. It does not establish the maximum system capacity.
