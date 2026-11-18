@@ -1,0 +1,2 @@
+k6 run performance_testing/average_load.js 2>&1 |
+Tee-Object evidence/AVERAGE-LOAD/average-load-results.txt
