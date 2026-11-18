@@ -1,0 +1,208 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\K\Downloads\member3_v2\member3\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\K\Downloads\member3_v2\member3
+collecting ... collected 3 items
+
+UI testing/test_st03_stock_cart_validation.py::test_st03_stock_and_cart_validation PASSED [ 33%]
+UI testing/test_st03_stock_cart_validation.py::test_st03_defect_d01_zero_quantity_rejected_by_server ERROR [ 66%]
+UI testing/test_st03_stock_cart_validation.py::test_st03_defect_d02_text_quantity_rejected ERROR [100%]
+
+=================================== ERRORS ====================================
+___ ERROR at setup of test_st03_defect_d01_zero_quantity_rejected_by_server ___
+
+    @pytest.fixture(scope="module")
+    def defect_product_url():
+        """One G07 product shared by the two defect checks (they only add to a guest cart)."""
+        drv = make_driver()
+        wait = lambda d, t=30: WebDriverWait(d, t)  # noqa: E731
+        try:
+            staff_login(drv, wait)
+            run = datetime.now().strftime("%Y%m%d-%H%M%S")
+>           _, link = staff_create_product(drv, wait, f"G07 Stock Defect {run}")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+UI testing\test_st03_stock_cart_validation.py:309: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+UI testing\test_st03_stock_cart_validation.py:150: in staff_create_product
+    wait(drv).until(EC.visibility_of_element_located(L.PRODUCT_PUBLISHED_NOTICE))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="6f4c6e16df8eac91ea62f08b8a3ba221")>
+method = <function visibility_of_element_located.<locals>._predicate at 0x000001F97930C510>
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -> T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            >>> from selenium.webdriver.common.by import By
+            >>> from selenium.webdriver.support.wait import WebDriverWait
+            >>> from selenium.webdriver.support import expected_conditions as EC
+            >>>
+            >>> # Wait until an element is visible on the page
+            >>> wait = WebDriverWait(driver, 10)
+            >>> element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            >>> print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() > end_time:
+                break
+            time.sleep(self._poll)
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: 
+E       Stacktrace:
+E       Symbols not available. Dumping unresolved backtrace:
+E       	(No symbol) [0x7ff69259e835]
+E       	(No symbol) [0x7ff6924e5714]
+E       	(No symbol) [0x7ff69292e60f]
+E       	(No symbol) [0x7ff6922b0906]
+E       	(No symbol) [0x7ff6922b0b9a]
+E       	(No symbol) [0x7ff6922f0c97]
+E       	(No symbol) [0x7ff6922a6c1d]
+E       	(No symbol) [0x7ff6922ee8d8]
+E       	(No symbol) [0x7ff6922a645c]
+E       	(No symbol) [0x7ff6922a563a]
+E       	(No symbol) [0x7ff6922a6283]
+E       	(No symbol) [0x7ff6923f3461]
+E       	(No symbol) [0x7ff6924022d8]
+E       	(No symbol) [0x7ff692646ac3]
+E       	(No symbol) [0x7ff69264d541]
+E       	(No symbol) [0x7ff6924f1fac]
+E       	(No symbol) [0x7ff6924ec864]
+E       	(No symbol) [0x7ff6924ec98a]
+E       	(No symbol) [0x7ff6924dd538]
+E       	(No symbol) [0x7ffda23e7374]
+E       	(No symbol) [0x7ffda43fcc91]
+
+.venv\Lib\site-packages\selenium\webdriver\support\wait.py:121: TimeoutException
+---------------------------- Captured stdout setup ----------------------------
+Opening wp-admin. If the browser shows an http warning page, click Continue in that window.
+________ ERROR at setup of test_st03_defect_d02_text_quantity_rejected ________
+
+    @pytest.fixture(scope="module")
+    def defect_product_url():
+        """One G07 product shared by the two defect checks (they only add to a guest cart)."""
+        drv = make_driver()
+        wait = lambda d, t=30: WebDriverWait(d, t)  # noqa: E731
+        try:
+            staff_login(drv, wait)
+            run = datetime.now().strftime("%Y%m%d-%H%M%S")
+>           _, link = staff_create_product(drv, wait, f"G07 Stock Defect {run}")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+UI testing\test_st03_stock_cart_validation.py:309: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+UI testing\test_st03_stock_cart_validation.py:150: in staff_create_product
+    wait(drv).until(EC.visibility_of_element_located(L.PRODUCT_PUBLISHED_NOTICE))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="6f4c6e16df8eac91ea62f08b8a3ba221")>
+method = <function visibility_of_element_located.<locals>._predicate at 0x000001F97930C510>
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -> T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            >>> from selenium.webdriver.common.by import By
+            >>> from selenium.webdriver.support.wait import WebDriverWait
+            >>> from selenium.webdriver.support import expected_conditions as EC
+            >>>
+            >>> # Wait until an element is visible on the page
+            >>> wait = WebDriverWait(driver, 10)
+            >>> element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            >>> print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() > end_time:
+                break
+            time.sleep(self._poll)
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: 
+E       Stacktrace:
+E       Symbols not available. Dumping unresolved backtrace:
+E       	(No symbol) [0x7ff69259e835]
+E       	(No symbol) [0x7ff6924e5714]
+E       	(No symbol) [0x7ff69292e60f]
+E       	(No symbol) [0x7ff6922b0906]
+E       	(No symbol) [0x7ff6922b0b9a]
+E       	(No symbol) [0x7ff6922f0c97]
+E       	(No symbol) [0x7ff6922a6c1d]
+E       	(No symbol) [0x7ff6922ee8d8]
+E       	(No symbol) [0x7ff6922a645c]
+E       	(No symbol) [0x7ff6922a563a]
+E       	(No symbol) [0x7ff6922a6283]
+E       	(No symbol) [0x7ff6923f3461]
+E       	(No symbol) [0x7ff6924022d8]
+E       	(No symbol) [0x7ff692646ac3]
+E       	(No symbol) [0x7ff69264d541]
+E       	(No symbol) [0x7ff6924f1fac]
+E       	(No symbol) [0x7ff6924ec864]
+E       	(No symbol) [0x7ff6924ec98a]
+E       	(No symbol) [0x7ff6924dd538]
+E       	(No symbol) [0x7ffda23e7374]
+E       	(No symbol) [0x7ffda43fcc91]
+
+.venv\Lib\site-packages\selenium\webdriver\support\wait.py:121: TimeoutException
+=================================== PASSES ====================================
+_____________________ test_st03_stock_and_cart_validation _____________________
+---------------------------- Captured stdout call -----------------------------
+Opening wp-admin. If the browser shows an http warning page, click Continue in that window.
+=========================== short test summary info ===========================
+PASSED UI testing/test_st03_stock_cart_validation.py::test_st03_stock_and_cart_validation
+ERROR UI testing/test_st03_stock_cart_validation.py::test_st03_defect_d01_zero_quantity_rejected_by_server
+ERROR UI testing/test_st03_stock_cart_validation.py::test_st03_defect_d02_text_quantity_rejected
+=================== 1 passed, 2 errors in 84.99s (0:01:24) ====================
