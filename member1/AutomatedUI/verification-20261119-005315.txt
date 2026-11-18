@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.0, pytest-8.4.2, pluggy-1.7.0 -- /Users/zeus/Documents/ChatGPT/Validata project/tmp/st01-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/zeus/Documents/ChatGPT/Validata project/output
+collecting ... collected 2 items
+
+Group7_Member1/member1/AutomatedUI/test_st01_product_purchase.py::test_st01_product_purchase[run-1] ST01 1: 01-staff-login
+ST01 1: 02a-draft-saved-reopened
+ST01 1: 02-published-product-stock
+Opening the product in the separate GUEST Chrome window. If that window shows a browser warning, review it yourself. The test will wait up to 120 seconds and will not bypass it.
+ST01 1: 03-guest-product
+ST01 1: 04-cart
+ST01 1: 05-back-navigation-cart
+ST01 1: 06-required-first-name-error
+ST01 1: 07-corrected-checkout
+ST01 1: 08-order-confirmation
+ST01 1: 09-staff-processing
+ST01 1: 10-stock-nine
+ST01 1: 11-staff-completed-saved
+ST01 1: 12-guest-completed
+PASSED
+Group7_Member1/member1/AutomatedUI/test_st01_product_purchase.py::test_st01_product_purchase[run-2] ST01 2: 01-staff-login
+ST01 2: 02a-draft-saved-reopened
+ST01 2: 02-published-product-stock
+Opening the product in the separate GUEST Chrome window. If that window shows a browser warning, review it yourself. The test will wait up to 120 seconds and will not bypass it.
+ST01 2: 03-guest-product
+ST01 2: 04-cart
+ST01 2: 05-back-navigation-cart
+ST01 2: 06-required-first-name-error
+ST01 2: 07-corrected-checkout
+ST01 2: 08-order-confirmation
+ST01 2: 09-staff-processing
+ST01 2: 10-stock-nine
+ST01 2: 11-staff-completed-saved
+ST01 2: 12-guest-completed
+PASSED
+
+========================= 2 passed in 75.26s (0:01:15) =========================
