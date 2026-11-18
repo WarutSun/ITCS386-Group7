@@ -1,0 +1,6 @@
+ST02 repeat 1: PASS
+Order: #737
+Product: G07-M4-Coupon-Product-20261117184439dff5a6
+Coupon: G07M4SAVE20261117184439dff5a6
+Discount: THB 20
+Total: THB 180
