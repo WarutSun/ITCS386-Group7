@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.0, pytest-8.4.2, pluggy-1.7.0 -- /Users/zeus/Documents/ChatGPT/Validata project/tmp/st01-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/zeus/Documents/ChatGPT/Validata project/output/Group7_Member1/member1/AutomatedUI
+collecting ... collected 2 items
+
+<Dir AutomatedUI>
+  <Module test_st01_product_purchase.py>
+    ST01: staff setup, guest purchase, validation, back navigation, completion.
+    
+    Two parameterized runs create fresh G07 products and one COD order each.
+    Uses the team's observed classic product editor and WooCommerce Block locators.
+    <Function test_st01_product_purchase[run-1]>
+    <Function test_st01_product_purchase[run-2]>
+
+========================== 2 tests collected in 0.09s ==========================
+Exit code: 0
