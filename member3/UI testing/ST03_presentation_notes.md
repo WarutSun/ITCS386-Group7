@@ -1,4 +1,4 @@
-# ST03: manual-to-UI mapping and 2-minute talk (Member 3, 4:00-6:00)
+# ST03: manual-to-UI mapping 
 
 ## Manual step to automated step
 
