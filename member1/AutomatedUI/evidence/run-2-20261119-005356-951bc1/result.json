@@ -1,0 +1,85 @@
+{
+  "run_id": "20261119-005356-951bc1",
+  "started_bangkok": "2026-11-19T00:53:56.799679+07:00",
+  "repeat": 2,
+  "product_name": "G07_ST01_TestMug_20261119-005356-951bc1",
+  "email": "g07.st01.20261119-005356-951bc1@example.com",
+  "status": "PASS",
+  "steps": [
+    {
+      "step": "01-staff-login",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:04.804085+07:00"
+    },
+    {
+      "step": "02a-draft-saved-reopened",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:08.025770+07:00"
+    },
+    {
+      "step": "02-published-product-stock",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:10.056713+07:00"
+    },
+    {
+      "step": "03-guest-product",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:17.369669+07:00"
+    },
+    {
+      "step": "04-cart",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:20.446097+07:00"
+    },
+    {
+      "step": "05-back-navigation-cart",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:22.942796+07:00"
+    },
+    {
+      "step": "06-required-first-name-error",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:26.182280+07:00"
+    },
+    {
+      "step": "07-corrected-checkout",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:26.328378+07:00"
+    },
+    {
+      "step": "08-order-confirmation",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:27.211385+07:00"
+    },
+    {
+      "step": "09-staff-processing",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:27.854965+07:00"
+    },
+    {
+      "step": "10-stock-nine",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:28.504963+07:00"
+    },
+    {
+      "step": "11-staff-completed-saved",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:30.272630+07:00"
+    },
+    {
+      "step": "12-guest-completed",
+      "status": "PASS",
+      "at_bangkok": "2026-11-19T00:54:30.644881+07:00"
+    }
+  ],
+  "product_id": "1148",
+  "order_id": "1149",
+  "mail_failure_notes": [
+    "Email “Processing order” failed to send: Could not instantiate mail function..\nNovember 18, 2026 at 5:54 pm Delete",
+    "Email “New order” failed to send: Could not instantiate mail function..\nNovember 18, 2026 at 5:54 pm Delete"
+  ],
+  "total_thb": "199.00",
+  "initial_stock": 10,
+  "final_stock": 9,
+  "finished_bangkok": "2026-11-19T00:54:30.644897+07:00"
+}
