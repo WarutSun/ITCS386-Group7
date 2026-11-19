@@ -1,4 +1,4 @@
-# Member 1 — System Testing and Automated UI Testing
+# Kong — System Testing and Automated UI Testing
 
 ## ITCS386 Project 2 — Group 7
 
