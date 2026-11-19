@@ -221,7 +221,7 @@ Not covered by ST01: product search, sorting/filtering, coupons, registration, c
 
 ```text
 member1/
-├── README.md                         ← present from this page
+├── README.md                         
 ├── AutomatedUI/
 │   ├── test_st01_product_purchase.py
 │   ├── run_st01.py
@@ -238,16 +238,4 @@ member1/
         └── manual-20261119/
 ```
 
-This README contains the manual case, automation explanation, run instructions, coverage and evidence links. No additional README inside the subfolders is needed. This folder is Member 1's contribution; the group coordinator combines it with the other members' work for final submission.
 
-## 11. Short Presentation Guide
-
-Use sections 3–7 in order, then hand over to Member 2.
-
-> My responsibility is ST01, which tests a complete purchase across staff and guest views. Staff creates a mug priced at 199 baht with ten units in stock. A guest adds one unit, checks out using cash on delivery, and staff completes the order.
->
-> I checked both the normal flow and two additional behaviors: going back from checkout preserves the cart, and leaving First name blank prevents checkout. The screenshots show these results. I also checked that stock decreases from ten to nine and that the guest sees the completed order.
->
-> The Selenium test repeats the whole scenario twice using fresh products and customer data. Both runs passed in 75.26 seconds. They created orders 1147 and 1149, and both ended as Completed with the correct total and stock.
->
-> The original manual order also showed an email-send failure in the staff notes. We recorded that separately as a suspected lab configuration issue. Next, Sun will explain the API and average-load tests.
